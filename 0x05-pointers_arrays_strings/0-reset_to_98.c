@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * reset_to_98 - function that changes variable value using pointer
+ * reset_to_98 - function that changes variable value @n using pointer
  *
  * Return: (0)
  */
