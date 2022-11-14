@@ -23,7 +23,7 @@ int main(void)
 		for (i = 0; i < end; i++)
 			{
 				nextTerm = t1 + t2;
-			if (i == (end - 1))
+			if (i == end)
 					{
 						printf("%.0f\n", nextTerm);
 					}
