@@ -1,43 +1,40 @@
 nclude <stdio.h>
-
+#define LARGEST 10000000000
 /**
- * main - finds and prints the first 98 Fibonacci numbers,
- * starting with 1 and 2
- * followed by a new line
- * Return: Always 0 (Success)
+ * main - Entry point
+ *
+ * Description: Find and print the first 98 fib numbers starting with 1 and 2,
+ *	numbers should be coma and space separated.
+ *
+ * Return: return 0 Always (Success)
  */
-
 int main(void)
 {
-		unsigned long int i, j, k, j1, j2, k1, k2;
+		unsigned long int int1 = 0, digit1 = 1, int2 = 0, digit2 = 2;
+			unsigned long int a, b, c;
+				int count;
 
-			j = 1;
-				k = 2;
-
-					printf("%lu", j);
-
-						for (i = 1; i < 91; i++)
+					printf("%lu, %lu, ", digit1, digit2);
+						for (count = 2; count < 98; count++)
 								{
-											printf(", %lu", k);
-													k = k + j;
-															j = k - j;
+											if (digit1 + digit2 > LARGEST || int2 > 0 || int1 > 0)
+														{
+																		a = (digit1 + digit2) / LARGEST;
+																					b = (digit1 + digit2) % LARGEST;
+																								c = int1 + int2 + a;
+																											int1 = int2, int2 = c;
+																														digit1 = digit2, digit2 = b;
+																																	printf("%lu%010lu", int2, digit2);
+																																			}
+													else
+																{
+																				b = digit1 + digit2;
+																							digit1 = digit2, digit2 = b;
+																										printf("%lu", digit2);
+																												}
+															if (count != 97)
+																			printf(", ");
 																}
-
-							j1 = j / 1000000000;
-								j2 = j % 1000000000;
-									k1 = k / 1000000000;
-										k2 = k % 1000000000;
-
-											for (i = 92; i < 99; ++i)
-													{
-																printf(", %lu", k1 + (k2 / 1000000000));
-																		printf("%lu", k2 % 1000000000);
-																				k1 = k1 + j1;
-																						j1 = k1 - j1;
-																								k2 = k2 + j2;
-																										j2 = k2 - j2;
-																											}
-												printf("\n");
-
-													return (0);
+							printf("\n");
+								return (0);
 }
