@@ -1,10 +1,10 @@
-nclude "main.h"
+#include "main.h"
 
 /**
- *  * print_number - prints a number
- *   *
- *    * @n: integer to print to character
- *     */
+ * print_number - prints a number
+ *
+ * @n: integer to print to character
+ */
 
 void print_number(int n)
 {
