@@ -1,23 +1,31 @@
-#include <stdio.h>
-#include "main.h"
+nclude "main.h"
 
 /**
- * print_number - Prints a number
- * @n: The number to print
+ * print_number - prints a number using recursion
+ *
+ * @n: params an integer
+ *
+ * No return
  */
 
 void print_number(int n)
 {
-	unsigned int num = n;
+		unsigned int x = 0;
 
-		if (n < 0)
-			{
-				putchar('-');
-				num = -num;
-			}
-		if (num > 9)
-			{
-				print_number(num / 10);
-			}
-		putchar(num % 10 + '0');
+			if (n < 0)
+					{
+								n = n * -1;
+
+										x = n;
+												_putchar('-');
+													}
+				else
+						{
+									x = n;
+										}
+
+					if (x / 10)
+								print_number(x / 10);
+
+						_putchar((x % 10) + '0');
 }
