@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * print_number - prints a number using recursion
@@ -9,7 +9,7 @@ nclude "main.h"
  */
 
 
-#includnt n)
+void print_number(int n)
 {
 		unsigned int n1;
 		
